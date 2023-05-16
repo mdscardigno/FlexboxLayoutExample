@@ -2,13 +2,80 @@
   font: 16px / 1 sans-serif;
 }
 html {
-  height: 100%;
+  font-family: sans-serif;
 }
 body {
-  margin: 0;
-  min-height: 100%;
+  /* styles before adding the buttons */
+  /* margin: 0; */
+  /* end of styles before adding the buttons */
+  width: 70%;
+  max-width: 960px;
+  margin: 20px auto;
 }
-.wrapper {
+
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+/* Flex items with the same order value will appear in their source order. 
+So if you have four items with order values of 2, 1, 1, and 0 set on them, respectively, their display order would be 4th, 2nd, 3rd, then 1st. */
+button:first-child {
+  order: 1;
+}
+
+div {
+  height: 100px;
+  border: 1px solid black;
+
+  display: flex;
+  align-items: center;
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* justify-content: space-around; */
+  /* justify-content: flex-end; */
+  /* justify-content: flex-start; */
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
+}
+
+header {
+  /* styles before adding the buttons */
+  background-color: #85577e;
+  height: 100px;
+  /* end of styles before adding the buttons */
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+/* styles before adding the buttons */
+article {
+  /* padding: 0; */
+  padding: 10px;
+  margin: 10px;
+  background-color: #80ced2;
+  flex: 200px;
+}
+
+/* ADDED: This tells all section tags to layout their children _flexibly_ */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  /* flex-direction: column; */
+  /* flex-direction: row; */
+}
+/* end styles before adding the buttons */
+
+/* Flexbox Example 1 */
+/* .wrapper {
   display: flex;
 }
 
@@ -20,4 +87,5 @@ body {
   border-radius: 5px;
   background-color: rgb(207, 232, 220);
   padding: 1em;
-}
+} */
+/* End of Flexbox Example 1 */
